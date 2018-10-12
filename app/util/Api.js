@@ -11,7 +11,6 @@ import websocket from '../websocket.js';
  */
 export class Api {
 
-
   static async getModelDescription(modelName, params = {}) {
     const jwt = localStorage.getItem('gondolin_jwt');
     const url = FetchUtils.addParams(`${api}/${modelName}/describe`, params);
@@ -30,6 +29,29 @@ export class Api {
             resolve(response.data);
           } else {
             reject(Error(`Error getting model description for ${modelName}.`));
+          }
+        });
+    });
+  }
+
+  static async getIdMap(modelName, params = {}) {
+    const jwt = localStorage.getItem('cropwatch_jwt');
+    const url = FetchUtils.addParams(`${api}/${modelName}/idmap`, params);
+    return new Promise((resolve, reject) => {
+      return fetch(url, {
+        method: 'GET',
+        cache: 'no-cache',
+        headers: {
+          'Content-Type': 'application/json; charset=utf-8',
+          'Authorization': `Bearer ${jwt}`
+        }
+      })
+        .then(response => response.json())
+        .then(response => {
+          if (response.success) {
+            resolve(response.data);
+          } else {
+            reject(Error(`Error creating IdMap for ${modelName}.`));
           }
         });
     });

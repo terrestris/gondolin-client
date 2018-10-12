@@ -3,7 +3,6 @@ import {
 } from '../config/app.config.js';
 
 export default {
-  mapView: appConfig.mapView,
   app: {
     config: appConfig,
     language: 'de',

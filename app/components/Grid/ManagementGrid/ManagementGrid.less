@@ -1,0 +1,96 @@
+@import "../../../variables.less";
+
+.management-grid {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  .management-grid-header {
+    .ant-switch {
+      margin: 0 5px;
+      background-color: @primary-color;
+      &.ant-switch-checked {
+        background-color: @secondary-color;
+      }
+    }
+  }
+
+  .react-geo-toolbar {
+    background-color: @background-color;
+    min-height: 40px;
+    justify-content: space-between;
+    padding: 0 5px;
+
+    &.management-grid-import-toolbar {
+      .ant-select {
+        margin-left: 5px;
+      }
+    }
+
+    &.management-grid-edit-toolbar {
+
+      .status {
+        display: flex;
+        align-items: center;
+
+        .anticon {
+          font-size: 2em;
+          margin-right: 5px;
+
+          &.status-ok {
+              color: @primary-color;
+          }
+          &.status-loading {
+              color: #2c6aff;
+          }
+          &.status-warning {
+              color: @secondary-color;
+          }
+          &.status-error {
+              color: red;
+          }
+        }
+      }
+    }
+
+  }
+
+  .management-grid-grid {
+    flex: 1;
+
+    .ag-root {
+      .ag-floating-top {
+        font-weight: bold;
+      }
+
+      .ag-body {
+
+        .ant-select,
+        input {
+          width: 100%;
+          height: 32px;
+        }
+
+        .ag-cell {
+          line-height: 28px;
+          height: 32px;
+        }
+      }
+
+    }
+
+    .bmel-green-text{
+      color: @primary-color;
+    }
+
+    .bmel-brown-text{
+      color: @secondary-color;
+    }
+  }
+}
+
+.feature-editor-modal {
+  .feature-editor-map {
+    height: 400px;
+  }
+}

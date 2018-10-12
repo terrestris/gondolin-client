@@ -7,6 +7,7 @@ import { translate } from 'react-i18next';
 import LoginPage from '../Page/LoginPage/LoginPage.jsx';
 import LandingPage from '../Page/LandingPage/LandingPage.jsx';
 import RegistrationPage from '../Page/RegistrationPage/RegistrationPage.jsx';
+import ManagementPage from '../Page/ManagementPage/ManagementPage.jsx';
 
 import {appConfig} from '../../config/app.config.js';
 
@@ -87,6 +88,7 @@ class Root extends React.Component {
         <Route exact path="/" component={LandingPage} />
         <Route path="/login" component={LoginPage} />
         <Route path="/registration" component={RegistrationPage} />
+        <Route path="/management" component={ManagementPage} />
         {
           !eventLogVisible ? null :
             <Window

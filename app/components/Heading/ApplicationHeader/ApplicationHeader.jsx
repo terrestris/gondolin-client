@@ -82,24 +82,6 @@ class ApplicationHeader extends React.Component{
           user: user.username
         })}
       </SimpleButton> :null;
-    const map = loggedIn
-      ? <Link to="/map">
-        <SimpleButton
-          className="headerbutton"
-          type="primary"
-        >{t('ApplicationHeader.map')}</SimpleButton>
-      </Link>
-      : null;
-    const data = loggedIn
-      ? <Link to="/analysis">
-        <SimpleButton
-          className="headerbutton"
-          type="primary"
-        >
-          {t('ApplicationHeader.analysis')}
-        </SimpleButton>
-      </Link>
-      : null;
     const management = loggedIn
       ? <Link to="/management">
         <SimpleButton
@@ -118,8 +100,6 @@ class ApplicationHeader extends React.Component{
         </div>
         <div className="center-items">
           {management}
-          {data}
-          {map}
         </div>
         <div className="right-items">
           {logIn}
