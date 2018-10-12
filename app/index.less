@@ -1,0 +1,68 @@
+@import "~roboto-fontface/css/roboto/roboto-fontface.css";
+@import "~font-awesome/css/font-awesome.css";
+@import "~antd/dist/antd.less";
+@import "./variables.less";
+
+html, body {
+  height: 100%;
+  width: 100%;
+  color: @text-color;
+  font-family: Roboto, sans-serif;
+}
+
+span.fa {
+  margin-right: 5px;
+}
+
+.centered {
+  text-align: center;
+}
+
+.app {
+  height: 100%;
+}
+
+.container-fluid {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-row {
+  height: @header-height;
+}
+
+.header-col {
+  height: 100%;
+}
+
+.footer-row {
+  height: @footer-height;
+  padding: 0 15px;
+}
+
+.page-row {
+  display: flex;
+  flex-direction: column;
+  height: @page-height;
+}
+
+.page {
+  padding: 20px;
+}
+
+.margin-small {
+  margin: 10px;
+}
+
+.react-geo-window-portal {
+  .react-geo-panel {
+    border: 3px solid @primary-color;
+  }
+  &.event-log-window {
+    .body {
+      overflow-y: scroll !important;
+    }
+  }
+}
+

@@ -1,0 +1,3 @@
+# resources
+
+Static resources
