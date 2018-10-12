@@ -43,6 +43,7 @@
     "i18next-browser-languagedetector": "2.2.3",
     "i18next-xhr-backend": "1.5.1",
     "js-logger": "1.4.1",
+    "ol": "5.2.0",
     "prop-types": "15.6.2",
     "react": "16.4.2",
     "react-dom": "16.4.2",
