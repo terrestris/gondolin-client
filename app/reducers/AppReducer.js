@@ -20,16 +20,6 @@ function app(app = initialState.app, action) {
         ...app,
         eventLogVisible: !app.eventLogVisible
       };
-    case TOGGLE_IMPRINT:
-      return {
-        ...app,
-        imprintVisible: !app.imprintVisible
-      };
-    case TOGGLE_FEATURE_GRID:
-      return {
-        ...app,
-        featureGridVisible: !app.featureGridVisible
-      };
     case SET_USER:
       return {
         ...app,
