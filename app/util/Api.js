@@ -115,13 +115,16 @@ export class Api {
     return new Promise((resolve, reject) => {
       websocket.addEventListener('message', event => {
         const json = JSON.parse(event.data);
+
+        if (json.type === 'import') {
+          if (json.success) {
+            resolve(json.message, data);
+          }
+          if (json.error) {
+            reject(new Error(`Error creating Entities of ${modelName}.`));
+          }
+        }
         // handles server message on finished import
-        if (json.entityImportDone) {
-          resolve(json.entityImportMessage);
-        }
-        if (json.entityImportError) {
-          reject(new Error(`Error creating Entities of ${modelName}.`));
-        }
       });
       websocket.send(JSON.stringify({
         jwt,
