@@ -54,13 +54,12 @@ export class Authentication {
    */
   static async register(userdata) {
     return new Promise((resolve, reject) => {
-      debugger;
       const details = Object.assign({}, userdata, { username: undefined, password: undefined });
       const payload = {
         username: userdata.username,
         password: userdata.password,
         details: details
-      }
+      };
 
       fetch(`${api}/register`, {
         method: 'POST',
