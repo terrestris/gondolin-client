@@ -38,7 +38,7 @@
   },
   "dependencies": {
     "@terrestris/react-geo": "10.0.0",
-    "antd": "3.8.3",
+    "antd": "3.26.15",
     "i18next": "11.6.0",
     "i18next-browser-languagedetector": "2.2.3",
     "i18next-xhr-backend": "1.5.1",
